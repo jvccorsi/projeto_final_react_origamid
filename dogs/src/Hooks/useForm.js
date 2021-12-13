@@ -1,6 +1,5 @@
 import React from 'react';
 
-// O que for validar só colocar nessa const
 const types = {
   email: {
     regex:
