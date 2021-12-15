@@ -5,7 +5,7 @@ import { ReactComponent as Dogs } from '../Assets/dogs.svg'; // Transformar o sv
 import { UserContext } from '../UserContext';
 
 const Header = () => {
-  const { data, userLogout } = React.useContext(UserContext);
+  const { data } = React.useContext(UserContext);
 
   // console.log(context.usuario); // Pegar o usuario do contexto (Algo glboal)
   return (
@@ -17,7 +17,6 @@ const Header = () => {
         {data ? (
           <Link className={styles.login} to="/conta">
             {data.nome}
-            <button onClick={userLogout}>Sair </button>
           </Link>
         ) : (
           <Link className={styles.login} to="/login">
