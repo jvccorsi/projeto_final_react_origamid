@@ -10,10 +10,9 @@ const UserHeader = () => {
   React.useEffect(() => {
     setTitle(location.pathname);
     const { pathname } = location;
-    if ('/conta' === location.pathname) setTitle('Minha Conta');
-    else if ('/conta/estatisticas' === location.pathname)
-      setTitle('Estatistica');
-    else if ('/conta/postar' === location.pathname) setTitle('Poste sua foto');
+    if ('/conta' === pathname) setTitle('Minha Conta');
+    else if ('/conta/estatisticas' === pathname) setTitle('Estatistica');
+    else if ('/conta/postar' === pathname) setTitle('Poste sua foto');
     else setTitle('');
   }, [location]);
   return (
