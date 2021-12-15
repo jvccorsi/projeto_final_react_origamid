@@ -7,6 +7,8 @@ import Login from './Components/Login/Login';
 import { UserStorage } from './UserContext';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import User from './Components/User/User';
+import ProtectedRoute from './Components/Error/ProtectedRoute';
 
 function App() {
   return (
@@ -19,7 +21,15 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route> {/*Rota para a home. */}
-            <Route path="/login/*" element={<Login />}></Route>{' '}
+            <Route path="login/*" element={<Login />}></Route>
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRoute>
+                  <User></User>
+                </ProtectedRoute>
+              }
+            ></Route>
             {/*Rota para o Login. */}
           </Routes>
           <Footer />
