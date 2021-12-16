@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import UserHeader from './UserHeader';
-import Feed from '../Feed/Feed';
+import Home from '../Feed/Home';
 import UserPhoto from './UserPhoto';
 import UserStats from './UserStats';
 
@@ -10,8 +10,8 @@ const User = () => {
     <section className="container">
       <UserHeader />
       <Routes>
-        <Route path="/" element={<Feed></Feed>}></Route>
-        <Route path="posta" element={<UserPhoto />}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="postar" element={<UserPhoto />}></Route>
         <Route path="estatistica" element={<UserStats />}></Route>
       </Routes>
     </section>

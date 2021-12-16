@@ -45,6 +45,7 @@ const UserHeaderNav = () => {
         </NavLink>
         <NavLink to="/conta/postar">
           <AdicionarFoto />
+
           {mobile && 'Adicionar Foto'}
         </NavLink>
         <button onClick={userLogout}>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const UserStats = () => {
+const Home = () => {
   return <div></div>;
 };
 
-export default UserStats;
+export default Home;
