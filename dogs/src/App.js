@@ -8,7 +8,7 @@ import { UserStorage } from './UserContext';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import User from './Components/User/User';
-import ProtectedRoute from './Components/Error/ProtectedRoute';
+import ProtectedRoute from './Components/Helper/ProtectedRoute';
 
 function App() {
   return (

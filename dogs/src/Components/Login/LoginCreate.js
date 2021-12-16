@@ -3,7 +3,7 @@ import { USER_POST } from '../../api';
 import useFetch from '../../Hooks/useFetch';
 import useForm from '../../Hooks/useForm';
 import UserContext from '../../UserContext';
-import Error from '../Error/Error';
+import Error from '../Helper/Error';
 import Button from '../Forms/Button';
 import Input from '../Forms/Input';
 
