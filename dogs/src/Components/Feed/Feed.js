@@ -42,7 +42,6 @@ const Feed = ({ user }) => {
           key={page}
           user={user}
           setModalPhoto={setModalPhoto}
-          setModalPhoto={setModalPhoto}
           page={page}
           setInfinite={setInfinite}
         />
