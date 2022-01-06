@@ -7,6 +7,7 @@ import { UserContext } from '../../UserContext';
 import Error from '../Helper/Error';
 import styles from './LoginForm.module.css';
 import styles_btn from '../Forms/Button.module.css';
+import Head from '../Helper/Head';
 
 const LoginForm = () => {
   const username = useForm(); // Custom hook criado.
@@ -22,6 +23,8 @@ const LoginForm = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Login" />
+
       <h1 className="title">Login</h1>
       <form action="" onSubmit={handleSubmit} className={styles.form}>
         <Input label="Usuario" type="text" name="username" {...username} />

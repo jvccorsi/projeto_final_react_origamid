@@ -5,6 +5,7 @@ import Error from '../Helper/Error';
 import Loading from '../Helper/Loading';
 import useFetch from '../../Hooks/useFetch';
 import PhotoContent from '../Photo/PhotoContent';
+import Head from '../Helper/Head';
 
 const Photo = () => {
   const { id } = useParams();
@@ -21,6 +22,7 @@ const Photo = () => {
     return (
       <section className="container mainContainer">
         {' '}
+        <Head title={data.photo.title} />
         <PhotoContent data={data} single={true} />
       </section>
     );

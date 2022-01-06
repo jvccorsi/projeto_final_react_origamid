@@ -15,29 +15,32 @@ import NotFound404 from './Components/NotFound404';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       {/* Configuração das rotas (Tem que ter o browserRouter por volta de tudo) */}
       <BrowserRouter>
         <UserStorage>
           {/* Passo as infos no value do context para conseguir usar  */}
           {/* Todas as infos que estiverem no context Storage (infos globais), vou conseguir usar no app */}
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />}></Route> {/*Rota para a home. */}
-            <Route path="login/*" element={<Login />}></Route>
-            <Route path="foto/:id" element={<Photo />}></Route>
-            <Route path="perfil/:user" element={<UserProfile />}></Route>
-            <Route path="*" element={<NotFound404 />}></Route>
-            <Route
-              path="conta/*"
-              element={
-                <ProtectedRoute>
-                  <User></User>
-                </ProtectedRoute>
-              }
-            ></Route>
-            {/*Rota para o Login. */}
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" element={<Home />}></Route>{' '}
+              {/*Rota para a home. */}
+              <Route path="login/*" element={<Login />}></Route>
+              <Route path="foto/:id" element={<Photo />}></Route>
+              <Route path="perfil/:user" element={<UserProfile />}></Route>
+              <Route path="*" element={<NotFound404 />}></Route>
+              <Route
+                path="conta/*"
+                element={
+                  <ProtectedRoute>
+                    <User></User>
+                  </ProtectedRoute>
+                }
+              ></Route>
+              {/*Rota para o Login. */}
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
