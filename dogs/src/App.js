@@ -10,6 +10,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import User from './Components/User/User';
 import ProtectedRoute from './Components/Helper/ProtectedRoute';
 import Photo from './Components/Photo/Photo';
+import UserProfile from './Components/User/UserProfile';
+import NotFound404 from './Components/NotFound404';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/" element={<Home />}></Route> {/*Rota para a home. */}
             <Route path="login/*" element={<Login />}></Route>
             <Route path="foto/:id" element={<Photo />}></Route>
+            <Route path="perfil/:user" element={<UserProfile />}></Route>
+            <Route path="*" element={<NotFound404 />}></Route>
             <Route
               path="conta/*"
               element={
